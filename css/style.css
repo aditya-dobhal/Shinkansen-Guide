@@ -1,0 +1,367 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+  }
+  
+  #container {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    padding-top: 10vh; 
+    box-sizing: border-box;
+  }
+
+#backgroundImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url("..//Images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.20; 
+    z-index: -1;
+}
+#backgroundImage2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url("..//Images/background2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.20; 
+    z-index: -1;
+}
+
+#navbar {
+    height: 10vh; /* Adjust as needed */
+    width: 80%;
+    position: fixed;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    background: rgb(41, 185, 232);
+    padding: 0 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    z-index: 100;
+  }
+
+#logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; 
+    margin: 0 30px;
+}
+
+#logo img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+
+#navbar ul,
+#navbar ol {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+  justify-content: center; /* Added */
+}
+ul {
+    position: relative;
+}
+
+ol {
+    position: relative;
+}
+
+li {
+    margin: 0 24px;
+    font-size: 24px;
+  }
+
+li a {
+    text-decoration: none;
+    color: #e2e2e2;
+    transition: 0.5s;
+}
+
+li a:hover {
+    color: #000;
+}
+
+#sideImg {
+    height: 500px;
+    width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translateY(-50%);
+    z-index: 999;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition: trasnform 1s;
+}
+
+#sideImg img {
+    height: 600px;
+}
+
+#sideImg:hover img {
+    transform: scale(0.9);
+    transition: transform 2s;
+}
+
+@keyframes animate {
+    0% {
+        transform: scale(1);
+    }
+    80% {
+        transform: scale(0.60);
+    }
+    95% {
+        transform: scale(1.10);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#contentSection {
+    height: 400px;
+    width: 750px;
+    position: absolute;
+    top: 50%;
+    right:-10%;
+    transform: translateY(-50%);
+}
+
+#contentSection h2 {
+    font-family: Helvetica;
+    font-size: 150px;
+    color: rgb(13, 34, 221);
+    font-weight: 900;
+}
+
+#contentSection p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #333;
+    margin-bottom: 20px; 
+    text-align: left; 
+    word-wrap: break-word;
+    max-width: 100%;
+  }
+  
+  #contentSection button {
+    height: 50px;
+    width: 200px;
+    border: none;
+    outline: none;
+    background: #d40219;
+    color: #eaf5ff;
+    cursor: pointer;
+    font-weight: 900;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  #contentSection button:hover {
+    background-color: #b70016; /* Change to the desired color on hover */
+  }
+  
+
+#contentSection img {
+    height: 800px;
+    position: absolute;
+    top: -200px;
+    left: -100px;
+    filter: drop-shadow(1px 1px 0px #86797a);
+    opacity: 0.08;
+    z-index: 1;
+}
+
+#pagination,
+#socialLinks {
+    height: 60px;
+    width: 600px;
+    position: absolute;
+    bottom: 4%;
+    right: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+#pagination {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#pagination a {
+    margin: 0 15px; /* Add gaps between the links */
+    padding: 5px 10px;
+    color: #333;
+    text-decoration: none;
+    border: 1px solid #333;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+#pagination a:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+#socialLinks {
+    width: 300px;
+    right: 5%;
+}
+
+#socialLinks a {
+    margin: 0 10px;
+    color: #d40219;
+    font-size: 36px;
+    transition: 0.5s;
+}
+
+#socialLinks a:hover {
+    color: #000;
+}
+
+#socialLinks #line {
+    background: #d40219;
+    height: 3px;
+    width: 200px;
+    border-radius: 30px;
+}
+
+/* ... (other styles) ... */
+
+
+#bulletTrainsContentSection {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+#bulletTrainsContentSection h1 {
+    font-size: 60px;
+    margin-bottom: 15px;
+    color: rgb(2, 188, 255);
+}
+
+#bulletTrainsContentSection h2 {
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+#bulletTrainsContentSection ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#bulletTrainsContentSection li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.train-info {
+    flex-grow: 1;
+    margin-right: 40px;
+    max-width: 60%;
+    text-align: left;
+}
+
+.train-image-container {
+    flex-shrink: 0;
+    max-width: 40%;
+    text-align: right;
+    overflow: hidden;
+}
+
+.train-image {
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+.train-image:hover{
+    transform: scale(1.1);
+}
+
+.train-line {
+    font-size: 30px;
+    color: rgb(54, 128, 141);
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.train-name {
+    font-size: 22px;
+    color: rgb(0, 145, 171);
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.train-description {
+    font-size: 18px;
+    color: black;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+#bulletTrainsContentSection button {
+    height: 50px;
+    width: 200px;
+    border: none;
+    outline: none;
+    background: #d40219;
+    color: #eaf5ff;
+    cursor: pointer;
+    font-weight: 900;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#bulletTrainsContentSection button:hover {
+    background-color: #b70016;
+    transform: scale(1.05);
+}
+
+#bulletTrainsContentSection button:active {
+    background-color: #d40219;
+    transform: scale(0.95);
+}
